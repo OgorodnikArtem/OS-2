@@ -8,7 +8,7 @@ int main()
 	PROCESS_INFORMATION piApp;
 	ZeroMemory(&si, sizeof(STARTUPINFO));
 	si.cb = sizeof(STARTUPINFO);
-	if (!CreateProcessA(nullptr, lpszAppName, nullptr, nullptr, FALSE,	//in all solutin we use ANSI encoding
+	if (!CreateProcessA(nullptr, lpszAppName, nullptr, nullptr, FALSE,
 		CREATE_NEW_CONSOLE, nullptr, nullptr, (LPSTARTUPINFOA)&si, &piApp))
 	{
 		_cputs("The new process is not created.\n");
